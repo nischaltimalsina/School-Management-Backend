@@ -5,18 +5,24 @@ const routineSchema = new mongoose.Schema({
     type: String,
     trim: true,
   },
-  session: [{
-    class: {
-      type: String,
-      trim: true,
+  session: [
+    {
+      class: {
+        type: String,
+        trim: true,
+      },
+      period: {
+        type: String,
+        trim: true,
+      },
+      subject: {
+        type: String,
+        trim: true,
+      },
+      teacher: {
+        type: String,
+        trim: true,
+      },
     },
-    period: {
-      type: String,
-      trim: true,
-    },
-    subject: {
-      type: String,
-      trim: true,
-    },
-  }],
+  ],
 });

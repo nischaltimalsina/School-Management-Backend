@@ -13,6 +13,12 @@ const teacherAvaliabilitySchema = new mongoose.Schema({
     type: Date,
     trim: true,
   },
+  assignedPeriods: [
+    {
+      period: { type: String },
+      assigned: { type: Boolean },
+    },
+  ],
 });
 
 const TeacherAvaliabilityData = mongoose.model(

@@ -1,4 +1,4 @@
-const RoutineSlotData = require("../model/routineSlot");
+const RoutineSlotData = require("../../model/schedule/routineSlot");
 
 const getSlot = async (req, res) => {
   try {
