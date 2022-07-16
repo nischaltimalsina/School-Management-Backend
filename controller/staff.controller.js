@@ -2,7 +2,7 @@ const StaffData = require("../model/staff");
 const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
 
-const signin = async (req, res) => {
+const signin = async (req, res) => { 
   if (!staffId || !password) {
     return res.status(422).json({ error: "Fill in the fields!" });
   }
@@ -30,15 +30,17 @@ const signin = async (req, res) => {
   }
 };
 
-const editUser = async(req,res)=>{
-    try {
-        const _id = req.params.id
-        const editStaff = await StaffData.findByIdAndUpdate(_id, req.body ,{new:true})
-        res.send(editStaff)
-      } catch (error) {
-        res.status(500).send(error);
-      }
-}
+const editUser = async (req, res) => {
+  try {
+    const _id = req.params.id;
+    const editStaff = await StaffData.findByIdAndUpdate(_id, req.body, {
+      new: true,
+    });
+    res.send(editStaff);
+  } catch (error) {
+    res.status(500).send(error);
+  }
+};
 
 const signup = async (req, res) => {
   const {
